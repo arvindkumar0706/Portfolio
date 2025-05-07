@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-image: url(Images/bg10.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding-right: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+header .logo {
+    margin-left: 8%;
+    font-size: 28px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    bottom: -6px;
+    height: 2px;
+    background-color: red;
+    transition: 0.2s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+section {
+  
+    padding: 60px 40px;
+}
+
+#home h1{
+    font-size: 55px;
+}
+
+#home button{
+    margin-top: 40px;
+    background-color:orangered;
+}
+
+#home button a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#home {
+    margin-left:5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    background: url('https://via.placeholder.com/1600x800') center/cover no-repeat;
+    
+}
+
+#home .text-content {
+    flex: 1;
+}
+.text-content p {
+    font-size: 34px;
+    min-width: 280px;
+    color: #ff7f50;
+}
+
+
+
+
+/* .text-content p{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.text-content p span{
+    position: relative;
+}
+
+.text-content p span::before{
+    content: "Andoid Developer";
+    color: #ff7f50;
+    animation: words 15s infinite;
+}
+
+.text-content p span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #ffffff;
+    border-left: 2px solid #ff7f50;
+    right: -8px;
+    animation: cursor .8s infinite, typing 15s steps(15) infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 2px solid #ffffff;
+    }
+}
+
+@keyframes words{
+    0%,25%{
+        content: "Android Developer";
+    }
+    26%,50%{
+        content: "AI / ML Engineer";
+    }
+    51%,75%{
+        content: "Backend Developer";
+    }
+    76%,100%{
+        content: "Web Designer";
+    }
+}
+
+@keyframes typing{
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+} */
+
+#home .image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#home img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+#about{
+    margin-top: 5%;
+}
+
+#about .items {
+    margin-top: 10%;
+    background-color: rgba(5, 4, 4, 0.3);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#about .icons {
+    flex: 0 0 120px;
+    text-align: center;
+}
+
+#about .icons img {
+    width: 150px;
+    margin: 10px auto;
+}
+
+#about .text {
+    flex: 1;
+    padding-left: 30px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    
+}
+
+.skills-grid .skill-category {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.skill-tile {
+    background: white;
+    display: flex;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.skill-tile:hover {
+    transform: translateY(-5px);
+}
+
+.skill-tile img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    
+}
+
+.skill-tile p{
+    font-size: 20px;
+    margin: 20px;
+}
+
+form {
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    background: violet;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background: #222;
+    color: #ccc;
+    padding: 30px 40px;
+    text-align: center;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 8px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+@media(max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+    }
+
+    #home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #home .image-content {
+        margin-top: 20px;
+    }
+
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about .text {
+        padding-left: 0;
+    }
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.project-tile {
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.project-tile:hover {
+    transform: translateY(-5px);
+}
+
+.project-tile img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project-tile h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.project-tile p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.edu-tile{
+    width: 400px;
+}
+
+.project-buttons {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: violet;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: darkviolet;
+}
+
